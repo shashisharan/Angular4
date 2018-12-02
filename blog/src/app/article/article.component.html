@@ -1,0 +1,22 @@
+<div class = "container">
+
+  <div class = "jumbotron">
+     <h1>{{article.title}}</h1>
+     <a href="{{link}}">{{article.link}}</a>
+     
+     <p>
+        {{article.vote}}
+     </p>
+     
+     <button type="button" class="btn btn-info" (click)="voteUp()">Like</button>
+     
+     
+     <button type="button" class="btn btn-info" (click)="voteDown()">unlike</button>
+     
+     <div class="text-right">
+     <button type="button" class="btn btn-info" (click)="delete(article.title)">Delete Article</button>
+     </div>
+     
+  </div>
+  
+</div>

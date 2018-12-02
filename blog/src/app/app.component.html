@@ -1,0 +1,47 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<!--<form class="form-horizontal">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Article name</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">Add the article name</small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Article link</label>
+    <input type="link" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>-->
+<div class = "container">
+<form class="form-horizontal">
+  <div class="form-group form-group-lg">
+    <label class="col-sm-2 control-label" for="formGroupInputLarge">Article name</label>
+    <div class="col-sm-5">
+      <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input" #newTitle> 
+    </div>
+  </div>
+  <div class="form-group form-group-lg">
+    <label class="col-sm-2 control-label" for="formGroupInputLarge">Article Link</label>
+    <div class="col-sm-5">
+      <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Large input" #newLink>
+    </div>
+  </div>
+  <div class="form-group form-group-lg">
+    
+    <div class="col-sm-5">
+      <button class="btn btn-default" type="submit" (click)="addArticle(newTitle,newLink)">Submit</button>
+    </div>
+  </div>
+</form>
+<app-article
+*ngFor="let article of articles"
+[article]="article">
+</app-article>
+</div>
+
+<router-outlet></router-outlet>
